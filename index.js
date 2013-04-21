@@ -1,4 +1,4 @@
 module.exports = function(item) {
   if(item === undefined)  return [];
-  return item instanceof Array ? item : [item];
+  return Object.prototype.toString.call(item) === "[object Array]" ? item : [item];
 }
